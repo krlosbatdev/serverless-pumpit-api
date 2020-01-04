@@ -27,13 +27,13 @@ Resources:
         - AttributeName: sk
           KeyType: RANGE
       GlobalSecondaryIndexes:
-        IndexName: gsi_1
-        KeySchema:
-          - AttributeName: sk
-            KeyType: HASH
-          - AttributeName: data
-            KeyType: RANGE
-        Projection:
-          ProjectionType: 'All'
+        - IndexName: gsi_1
+          KeySchema:
+            - AttributeName: sk
+              KeyType: HASH
+            - AttributeName: data
+              KeyType: RANGE
+          Projection:
+            ProjectionType: 'All'
       # Set the capacity to auto-scale
       BillingMode: PAY_PER_REQUEST
