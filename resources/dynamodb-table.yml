@@ -1,0 +1,39 @@
+Resources:
+  PumpItTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.tableName}
+      AttributeDefinitions:
+        #Will have userId and trainingId
+        - AttributeName: pk
+          AttributeType: S
+        #user-level and training composite level#weekday
+        - AttributeName: sk
+          AttributeType: S
+        #training target
+        - AttributeName: data
+          AttributeType: S
+        # - AttributeName: userExperience
+        #   AttributeType: N
+        # - AttributeName: userLevel
+        #   AttributeType: N
+        # - AttributeName: userRoles
+        #   AttributeType: L
+        # - AttributeName: trainingWorkout
+        #   AttributeType: M
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        IndexName: gsi_1
+        KeySchema:
+          - AttributeName: sk
+            KeyType: HASH
+          - AttributeName: data
+            KeyType: RANGE
+        Projection:
+          ProjectionType: 'All'
+      # Set the capacity to auto-scale
+      BillingMode: PAY_PER_REQUEST

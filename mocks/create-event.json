@@ -1,0 +1,8 @@
+{
+  "body": "{\"trainingLevel\":\"0\",\"weekday\":\"Monday\",\"target\":\"Chest\",\"workout\":[{\"description\": \"Incline Leg Press 2x20, 4x15\",\"tip\": \"\"},      {\"description\": \"Hack Squat 1x15, 4x10\",\"tip\": \"\"},      {\"description\": \"Seated Leg Press 4x15\",\"tip\": \"\"},      {\"description\": \"Leg Extensions 2x15, 3x10\",\"tip\": \"\"},      {\"description\": \"Lying Leg Curls 1x15, 4x10\",\"tip\": \"\"},      {\"description\": \"Standing Calf Raises 2x15, 4x12\",\"tip\": \"\"}]}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
