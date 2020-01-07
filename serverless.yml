@@ -70,17 +70,17 @@ functions:
   #         method: get
   #         cors: true
   #         authorizer: aws_iam
-  # list:
-  #   # Defines an HTTP API endpoint that calls the main function in list.js
-  #   # - path: url path is /pumpit
-  #   # - method: GET request
-  #   handler: services/training-api/list.main
-  #   events:
-  #     - http:
-  #         path: pumpit
-  #         method: get
-  #         cors: true
-  #         authorizer: aws_iam
+  list:
+    # Defines an HTTP API endpoint that calls the main function in list.js
+    # - path: url path is /pumpit
+    # - method: GET request
+    handler: services/training-api/list.main
+    events:
+      - http:
+          path: pumpit
+          method: get
+          cors: true
+          authorizer: aws_iam
   # update:
   #   # Defines an HTTP API endpoint that calls the main function in update.js
   #   # - path: url path is /pumpit/{id}
