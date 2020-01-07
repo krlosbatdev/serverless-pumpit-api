@@ -12,9 +12,9 @@ export async function main(event, context) {
     Item: {
       //trainingId
       pk: uuid.v1(),
-      //training composite level#weekday
-      sk: data.trainingLevel + "#" + data.weekday,
-      data: data.target,
+      sk: data.trainingLevel,
+      //training composite weekday#target
+      data: data.weekday + "#" + data.target,
       trainingWorkout: data.workout,
       createdAt: Date.now()
     }
@@ -24,6 +24,8 @@ export async function main(event, context) {
     await dynamoDbLib.call("put", params);
     return success(params.Item);
   } catch (e) {
+    console.log(e);
+
     return failure({
       status: false
     });
