@@ -6,6 +6,20 @@
   "configurations": [{
       "type": "node",
       "request": "launch",
+      "name": "run get-by-level",
+      "program": "${workspaceFolder}\\node_modules\\serverless\\bin\\serverless",
+      "args": [
+        "invoke",
+        "local",
+        "-f",
+        "list",
+        "--path",
+        "services/training-api/mocks/get-by-level-day.event.json"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "run list-training",
       "program": "${workspaceFolder}\\node_modules\\serverless\\bin\\serverless",
       "args": [
@@ -15,10 +29,7 @@
         "list",
         "--data",
         "{}"
-      ],
-      "env": {
-        "STRIPE_SECRET_KEY": "sk_test_l0WrfAW17sREkmxWzn70HMxW00OjEkZnbq"
-      }
+      ]
     },
     {
       "type": "node",
@@ -31,7 +42,7 @@
         "-f",
         "create",
         "--path",
-        "mocks/create-event.json"
+        "services/training-api/mocks/create.event.json"
       ],
       "env": {
         "STRIPE_SECRET_KEY": "sk_test_l0WrfAW17sREkmxWzn70HMxW00OjEkZnbq"

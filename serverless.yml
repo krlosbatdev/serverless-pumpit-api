@@ -59,17 +59,17 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
-  # get:
-  #   # Defines an HTTP API endpoint that calls the main function in get.js
-  #   # - path: url path is /pumpit/{id}
-  #   # - method: GET request
-  #   handler: services/training-api/get.main
-  #   events:
-  #     - http:
-  #         path: pumpit/{id}
-  #         method: get
-  #         cors: true
-  #         authorizer: aws_iam
+  get:
+    # Defines an HTTP API endpoint that calls the main function in get-by-level-day.js
+    # - path: url path is /pumpit/{id}
+    # - method: GET request
+    handler: services/training-api/get-by-level-day.main
+    events:
+      - http:
+          path: training
+          method: post
+          cors: true
+          authorizer: aws_iam
   list:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /pumpit

@@ -1,0 +1,8 @@
+{
+  "body": "{\"trainingLevel\":\"0\",\"weekday\":\"Tuesday\",\"target\":\"Legs\",\"workout\":[{\"description\": \"Incline Leg Press 2x20, 4x15\"},{\"description\": \"Hack Squat 1x15, 4x10\"},{\"description\": \"Seated Leg Press 4x15\"},{\"description\": \"Leg Extensions 2x15, 3x10\"},{\"description\": \"Lying Leg Curls 1x15, 4x10\"},{\"description\": \"Standing Calf Raises 2x15, 4x12\"}]}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
